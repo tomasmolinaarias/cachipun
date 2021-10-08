@@ -73,7 +73,7 @@ for(i=0; i < partidas; i++) {
     
 };
 //hola profe y francisco le pido porfavor si me pueden dar hasta el domingo ya que el viernes y el sabado voy estar ocupado 
-
+// trate de hacerlo como una compañera y algo tuve que hacer mal XD
 
 
 
