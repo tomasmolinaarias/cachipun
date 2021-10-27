@@ -1,83 +1,35 @@
-// selecion de partidas
-let partidas = parseInt (prompt ("cuantas partidas quieres jugar "));
+const boton = document.getElementById('btn');
+// let random = Math.floor(Math.random()*(4-1))+1;
+// console.log(random)
+boton.addEventListener('click', function resultado(jugando) {
+    let random = Math.floor(Math.random() * (4 - 1)) + 1;
 
-let jugadaPC = "";
-let jugada ="";
-let resumen = "";
+    let jugadon = document.getElementById("jugada").value
+    if (jugadon === random) {
+        alert = ("empate")
+    } else if (jugando == 1 && random === 2) {
 
-function eleccionMaquina(jugadaPC){
-    let numero = Math.floor(Math.random()*3);
-    switch(numero){
-        case `0`:
-            jugadaPC = "piedra"
-        break;
-        case `1`:
-            jugadaPC = "tijera"
-        break;
-        case `2`:
-            jugadaPC = "papel"
-        break;    
-    };
-    return jugadaPC;
-};
+        alert("perdiste intenta otra ves")
+    } else if (jugando == 2 && random === 3) {
 
-//funcion para el resulatado del juego
-function cachipun (jugada, jugadaPC){
-    if(jugadaPC === jugada){
-        resultado = "empate";
-    } //winner
-    else if(jugadaPC === "tijera" && jugada === "piedra"){
-        resultado = "victoria";
+        alert("perdiste intenta otra ves")
+    } else if (jugando == 3 && random === 1) {
+
+        alert("perdiste intenta otra ves")
+    } else if (jugando == 1 && random === 3) {
+
+        alert("ganaste quieres jugar de nuevo")
+    } else if (jugando == 2 && random === 1) {
+
+        alert("ganaste quieres jugar de nuevo")
+    } else if (jugando == 3 && random === 2) {
+
+        alert("ganaste quieres jugar de nuevo")
+    } else {
+
+        alert("porfavor ingresa un numero del 1 al 3")
     }
-    else  if(jugadaPC === "papel" && jugada === "tijera"){
-        resultado = "victoria";
-    }
-    else if(jugadaPC === "piedra" && jugada === "papel"){
-        resultado = "victoria";
-    } //gameover
-    else if(jugadaPC === "tijera" && jugada === "papel"){
-        resultado = "derrota";
-    }
-    else if(jugadaPC === "piedra" && jugada === "tijera"){
-        resultado = "derrota";
-    }
-    else if(jugadaPC === "papel" && jugada === "piedra"){
-        resultado = "derrota";
-    }
-    else {
-        resultado = "error";
-    }
-    return resultado;
-};
-for(i=0; i < partidas; i++) {
-    jugada = prompt (`¿cual elijiras tijera, piedra o papel?`,`piedra`).toLowerCase();
-    jugadaPC = eleccionMaquina (jugadaPC)
-    resumen = cachipun(jugada, jugadaPC)
-    switch(resumen){
-        case "victoria":
-             alert ("felicidades has ganado contra la consola 😸")
-             console.log("felicidades")
-        break;
-        case "derrota":
-            alert ("lo siento perdiste contra la consola 😿")
-            console.log("sorry para la otra")
-        break;
-        case "empate":
-            alert ("cerca fue un empate 🙀")
-            console.log("cerca")
-        break;
-        default:
-             alert("lo siento pero no escribiste lo que te pedimos")
-        break;
-    };
-    
-};
-//hola profe y francisco le pido porfavor si me pueden dar hasta el domingo ya que el viernes y el sabado voy estar ocupado 
-// trate de hacerlo como una compañera y algo tuve que hacer mal XD
-
-
-
-
-
-
-
+    return [
+        [resultado]
+    ]
+})

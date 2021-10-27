@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CACHIPUN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
- <h1>piedra, papael o tijeras
-     
- </h1>
 
-    <script src="assets/js/app.js"></script>
+<body>
+    <nav>
+        <div class="container">
+            <h1>Piedra, papel o tijera</h1>
+            <hr>
+        </div>
+    </nav>
+    <section>
+        <div class="container">
+            <h5 class="h2">¿cual es tu jugada?</h5>
+            <p class="h5">1 = piedra &#9994;</p>
+            <p class="h5">2 = papel &#9995;</p>
+            <p class="h5 mb-4">3 = tijera &#x270C;</p>
+            <form  action="">                
+                <input type="text" id="jugada">
+                <input id="btn" type="button" value="resultado">
+            </form>
+        </div>
+    </section>
+    <section>
+        <h3 class="resultado"></h3>
+    </section>
+
+
+
+    <!--vinculamos javascript-->
+    <script src="./assets/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </body>
+
 </html>
